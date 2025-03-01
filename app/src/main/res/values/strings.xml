@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MySharedPreferences</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">No Handphone</string>
+    <string name="age">Age</string>
+    <string name="love_mobile_legend">Love Mobile Legend</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="change">Ubah</string>
+    <string name="save">Simpan</string>
+    <string name="dummy_name">Muklis</string>
+    <string name="dummy_email">john.mclean@examplepetstore.com</string>
+    <string name="dummynumber">08123456789</string>
+    <string name="dummyage">20</string>
+    <string name="dummyislove">IsLoveMobileLegend</string>
+
 </resources>
