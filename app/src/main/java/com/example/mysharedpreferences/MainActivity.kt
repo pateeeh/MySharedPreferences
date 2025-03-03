@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mUserPreference = UserPreference(this)
         showExistingPreference()
 
-        binding.btnSave.setOnClickListener (this)
+        binding.btnSave.setOnClickListener(this)
     }
 
     private fun showExistingPreference() {
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun checkForm(userModel: UserModel) {
         when{
-            userModel.name.toString().isEmpty() -> {
+            userModel.name.toString().isNotEmpty() -> {
                 binding.btnSave.text = getString(R.string.change)
                 isPreferenceEmpty = false
             }
@@ -70,13 +70,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.btn_save) {
-            val intent = Intent(this, FormUserPreferenceActivity::class.java)
+            val intent = Intent(this@MainActivity, FormUserPreferenceActivity::class.java)
             when {
                 isPreferenceEmpty -> {
                     intent.putExtra(
                         FormUserPreferenceActivity.EXTRA_TYPE_FORM,
                         FormUserPreferenceActivity.TYPE_ADD
                     )
+                    intent.putExtra("USER", userModel)
                 }
                 else -> {
                     intent.putExtra(
